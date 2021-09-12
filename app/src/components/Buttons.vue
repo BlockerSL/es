@@ -4,8 +4,16 @@
       type="primary"
       icon="el-icon-refresh"
       @click="random"
-    >Solve random equation</el-button>
- 
+    >Solve هاوکێشەی هەڕەمەکی </el-button>
+   <el-button
+      type="primary"
+      icon="el-icon-view"
+      @click="syntaxGuide = !syntaxGuide"
+    >
+      {{ syntaxGuide ? "Hide" : "Show" }} syntax guide
+    </el-button>
+    <SyntaxGuide :initialVisibility="syntaxGuide" @visibility="syntaxGuide = $event" />
+
 
   </div>
 </template>
